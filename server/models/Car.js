@@ -12,7 +12,7 @@ const Car = sequelize.define("Car", {
     allowNull: false,
   },
   image: {
-    type: DataTypes.STRING, // this will store the image URL or filename
+    type: DataTypes.STRING, 
     allowNull: true,
   },
 });

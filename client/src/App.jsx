@@ -16,7 +16,6 @@ export default function App() {
 
   return (
     <Routes>
-      {/* Root route: redirect admin to /admin, normal user to /carplatform */}
       <Route
         path="/"
         element={
@@ -32,19 +31,16 @@ export default function App() {
         }
       />
 
-      {/* Login route */}
       <Route
         path="/login"
         element={!token ? <Login /> : <Navigate to="/" replace />}
       />
 
-      {/* Register route */}
       <Route
         path="/register"
         element={!token ? <Register /> : <Navigate to="/" replace />}
       />
 
-      {/* Admin route */}
       <Route
         path="/admin"
         element={
@@ -56,7 +52,6 @@ export default function App() {
         }
       />
 
-      {/* Cart route */}
       <Route
         path="/cart"
         element={token ? <Cart /> : <Navigate to="/login" replace />}

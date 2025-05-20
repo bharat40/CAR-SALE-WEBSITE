@@ -7,7 +7,6 @@ exports.makePayment = async (req, res) => {
         return res.status(400).json({ error: "Missing required fields" });
     }
 
-    // Build items list string for email
     const itemsList = items
         .map(
             (item) =>
@@ -15,10 +14,9 @@ exports.makePayment = async (req, res) => {
         )
         .join("\n");
 
-    // Email content
     const mailOptions = {
-        from: "singlabhargav2004@gmail.com", // sender address
-        to: email, // list of receivers
+        from: "singlabhargav2004@gmail.com", 
+        to: email, 
         subject: "Congratulations on your car purchase!",
         text: `Dear customer,
 

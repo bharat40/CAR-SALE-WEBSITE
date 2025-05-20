@@ -1,9 +1,9 @@
-// controllers/authController.js
+
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-const JWT_SECRET = process.env.JWT_SECRET; // move to env
+const JWT_SECRET = process.env.JWT_SECRET; 
 
 exports.register = async (req, res) => {
     try {
